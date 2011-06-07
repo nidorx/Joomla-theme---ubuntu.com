@@ -1,0 +1,62 @@
+form.beautry-form{
+
+}
+form.beautry-form .field-container{
+    position: relative;
+    margin-bottom: 12px;
+}
+form.beautry-form .field-container label{
+    float: left;
+    width: 80px;
+}
+form.beautry-form.label-medium .field-container label{
+    width: 140px;
+}
+form.beautry-form .field-container input{
+
+}
+
+form.colored{
+    background-color: #DFDCD9;
+    border-radius: 4px 4px 4px 4px;
+}
+
+
+
+
+fieldset{
+    border: none;
+}
+input,select,textarea{
+    border: 1px solid #CCCCCC;
+    font-size: 11px;    
+    margin: 0 8px;
+}
+input[type=text],input[type=password]{   
+    height: 14px;
+    padding: 6px 0 4px 4px;
+}
+
+input[type=submit],input[type=button],button{
+    background-color: #DD4814;
+    border-color: #DD4814;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    height: 24px;
+    border: medium none;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px #000000;
+}
+input[type=submit]:hover,input[type=button]:hover,button:hover{
+    background-color: #B83A10;
+}
+
+
+
+form.contact input,form.contact textarea{
+    width: 200px;
+}

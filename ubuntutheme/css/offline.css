@@ -1,0 +1,10 @@
+#wrapper{
+    width: 400px;
+}
+.container,#header .container{
+    width: 398px;
+}
+
+.grid_12{
+    width: 394px;
+}
