@@ -3,13 +3,13 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>by(){ Developers; }</title>
-        <link rel="stylesheet" href="/templates/bydevelopers/css/960_12grid.css" type="text/css" />
-        <link rel="stylesheet" href="/templates/bydevelopers/css/text.css" type="text/css" />
-        <link rel="stylesheet" href="/templates/bydevelopers/css/style.css" type="text/css" />
-        <link rel="stylesheet" href="/templates/bydevelopers/css/header.css" type="text/css" />
-        <link rel="stylesheet" href="/templates/bydevelopers/css/content.css" type="text/css" />
-        <link rel="stylesheet" href="/templates/bydevelopers/css/forms.css" type="text/css" />
-        <link rel="stylesheet" href="/templates/bydevelopers/css/offline.css" type="text/css" />
+        <link rel="stylesheet" href="/templates/ubuntutheme/css/960_12grid.css" type="text/css" />
+        <link rel="stylesheet" href="/templates/ubuntutheme/css/text.css" type="text/css" />
+        <link rel="stylesheet" href="/templates/ubuntutheme/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="/templates/ubuntutheme/css/header.css" type="text/css" />
+        <link rel="stylesheet" href="/templates/ubuntutheme/css/content.css" type="text/css" />
+        <link rel="stylesheet" href="/templates/ubuntutheme/css/forms.css" type="text/css" />
+        <link rel="stylesheet" href="/templates/ubuntutheme/css/offline.css" type="text/css" />
     </head>
 
     <body class="home com_content frontpage">
@@ -22,7 +22,7 @@
                                     <div class="logo">
                                         <div class="block">
                                             <div class="module-content">
-                                                <p><a id="logo" href="http://bydevelopers.com.br" title="Home" rel="home"> http://bydevelopers.com.br </a></p>                    </div>
+                                                <p><a id="logo" href="http://ubuntutheme.com.br" title="Home" rel="home"> http://ubuntutheme.com.br </a></p>                    </div>
                                             <div class="clear"></div>
                                         </div>
                                     </div>

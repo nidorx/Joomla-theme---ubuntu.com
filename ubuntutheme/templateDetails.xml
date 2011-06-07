@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <install version="1.5" type="template">
-    <name>by(){Developers;}</name>
+    <name>Joomla ubuntu theme for by(){Developers;}</name>
     <version>0.1.0</version>
     <creationDate>Jun 2011</creationDate>
     <author>Alex Rodin - Nidorx </author>
@@ -323,7 +323,7 @@
             <language tag="pt-BR">pt-BR.tpl_jft.ini</language>
         </languages>
     </administration>
-    <params addpath="/templates/bydevelopers/admin/joomla/elements">
+    <params addpath="/templates/ubuntutheme/admin/joomla/elements">
         <param name="style" type="style" default="" label="" description=""></param>
    
         <param name="layouts" type="block"  label="LAYOUTS"  />
