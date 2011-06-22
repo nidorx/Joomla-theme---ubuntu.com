@@ -13,8 +13,8 @@ global $jflt;
 $jflt = jflt::get();
 
 $headerstuff = $this->getHeadData(); // pega os dados do cabeçalho
-unset($headerstuff['scripts'][$this->baseurl . '/media/system/js/mootools.js']); // remove mootools 1.11
-unset($headerstuff['scripts'][$this->baseurl . '/media/system/js/caption.js']); // remove caption
+//unset($headerstuff['scripts'][$this->baseurl . '/media/system/js/mootools.js']); // remove mootools 1.11
+//unset($headerstuff['scripts'][$this->baseurl . '/media/system/js/caption.js']); // remove caption
 // Insere o novo mootools
 //$headerstuff['scripts'] = array_merge(
 //    array('https://ajax.googleapis.com/ajax/libs/mootools/1.3.0/mootools-yui-compressed.js' => 'text/javascript'), $headerstuff['scripts']
@@ -28,8 +28,8 @@ $this->setHeadData($headerstuff); // carrega as modificações efetuadas
     <head>
         <jdoc:include type="head" />
         <?
-        $this->addScript($jflt->templateUrl . '/js/mootools-core.js');
-        $this->addScript($jflt->templateUrl . '/js/mootools-more.js');
+        //$this->addScript($jflt->templateUrl . '/js/mootools-core.js');
+        //$this->addScript($jflt->templateUrl . '/js/mootools-more.js');
 
         $jflt->addStyleSheet($jflt->templateUrl . '/css/960_12grid.css');
         $jflt->addStyleSheet($jflt->templateUrl . '/css/text.css');

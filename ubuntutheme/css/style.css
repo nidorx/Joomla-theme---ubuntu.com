@@ -119,8 +119,9 @@ body {
 *
 * @section readmore
 */
-.readon-surround{
-
+p.readon-surround{
+    float: right;
+    margin: 4px;
 }
 a.readon,a.readon:hover{
     font-size: 16px;

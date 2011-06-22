@@ -13,46 +13,46 @@
 defined('_JEXEC') or die('Restricted access');
 include_once(dirname(__FILE__) . DS . '..' . DS . 'icon.php');
 
-$canEdit = ($this->user->authorize('com_content', 'edit', 'content', 'all') || $this->user->authorize('com_content', 'edit', 'content', 'own'));
+$canEdit = ($this->user->authorize('com_content', 'edit', 'content', 'all')
+        || $this->user->authorize('com_content', 'edit', 'content', 'own'));
 ?>
-
 <div class="joomla <? echo $this->escape($this->params->get('pageclass_sfx')); ?>">
 
-    <? /** Begin Page Title * */ if ($this->params->get('show_page_title', 1) && $this->params->get('page_title') != $this->article->title) : ?>
+        <? /** Begin Page Title * */ if ($this->params->get('show_page_title', 1) && $this->params->get('page_title') != $this->article->title) : ?>
         <h1 class="pagetitle">
-            <? echo $this->escape($this->params->get('page_title')); ?>
+        <? echo $this->escape($this->params->get('page_title')); ?>
         </h1>
-    <? /** End Page Title * */ endif; ?>
+<? /** End Page Title * */ endif; ?>
 
     <div class="article internal">
         <div class="article-bg">
 
 
-            <? /** Begin Article Title * */ if ($canEdit || $this->params->get('show_title')) : ?>
+                <? /** Begin Article Title * */ if ($canEdit || $this->params->get('show_title')) : ?>
                 <div class="headline">
-                    <? if ($this->params->get('show_title')) : ?>
+                        <? if ($this->params->get('show_title')) : ?>
                         <h1 class="article-title">
                             <? if ($this->params->get('link_titles') && $this->article->readmore_link != '') : ?>
                                 <a href="<? echo $this->article->readmore_link; ?>"><? echo $this->escape($this->article->title); ?></a>
                             <? else : ?>
                                 <? echo $this->escape($this->article->title); ?>
-                            <? endif; ?>
+                        <? endif; ?>
                         </h1>
                     <? endif; ?>
                     <? if (!$this->print) : ?>
-                        <? if ($canEdit) : ?>
+                            <? if ($canEdit) : ?>
                             <span class="icon edit">
-                                <? echo JHTML::_('icon.edit', $this->article, $this->params, $this->access); ?>
+                            <? echo JHTML::_('icon.edit', $this->article, $this->params, $this->access); ?>
                             </span>
                         <? endif; ?>
-                    <? else : ?>
+                        <? else : ?>
                         <span class="icon printscreen">
-                            <? echo JHTML::_('icon.print_screen', $this->article, $this->params, $this->access); ?>
+                        <? echo JHTML::_('icon.print_screen', $this->article, $this->params, $this->access); ?>
                         </span>
-                    <? endif; ?>
+    <? endif; ?>
                     <div class="clear"></div>
                 </div>
-            <? /** End Article Title * */ endif; ?>
+<? /** End Article Title * */ endif; ?>
 
             <div class="article-content">
                 <?
@@ -63,23 +63,23 @@ $canEdit = ($this->user->authorize('com_content', 'edit', 'content', 'all') || $
 
                 <? echo $this->article->event->beforeDisplayContent; ?>
 
-                <? if ((intval($this->article->modified) != 0 && $this->params->get('show_modify_date')) || ($this->params->get('show_author') && ($this->article->author != "")) || ($this->params->get('show_create_date')) || ($this->params->get('show_pdf_icon') || $this->params->get('show_print_icon') || $this->params->get('show_email_icon'))) : ?>
+<? if ((intval($this->article->modified) != 0 && $this->params->get('show_modify_date')) || ($this->params->get('show_author') && ($this->article->author != "")) || ($this->params->get('show_create_date')) || ($this->params->get('show_pdf_icon') || $this->params->get('show_print_icon') || $this->params->get('show_email_icon'))) : ?>
                     <div class="articleinfo">
                         <div class="article-info">
                             <span class="info">
-                                <? /** Begin Created Date * */ if ($this->params->get('show_create_date')) : ?>
+                                    <? /** Begin Created Date * */ if ($this->params->get('show_create_date')) : ?>
                                     <span class="date-posted">
-                                        <? echo JHTML::_('date', $this->article->created, JText::_('DATE_FORMAT_LC2')) ?>
+                                    <? echo JHTML::_('date', $this->article->created, JText::_('DATE_FORMAT_LC2')) ?>
                                     </span>
                                 <? /** End Created Date * */ endif; ?>
 
-                                <? /** Begin Author * */ if ($this->params->get('show_author') && ($this->article->author != "")) : ?>
+                                    <? /** Begin Author * */ if ($this->params->get('show_author') && ($this->article->author != "")) : ?>
                                     <span class="author">
-                                        <? JText::printf('Written by', ($this->escape($this->article->created_by_alias) ? $this->escape($this->article->created_by_alias) : $this->escape($this->article->author))); ?>
+                                    <? JText::printf('Written by', ($this->escape($this->article->created_by_alias) ? $this->escape($this->article->created_by_alias) : $this->escape($this->article->author))); ?>
                                     </span>
                                 <? /** End Author * */endif; ?>
 
-                                <? /** Begin Article Icons * */ if ($this->params->get('show_pdf_icon') || $this->params->get('show_print_icon') || $this->params->get('show_email_icon')) : ?>
+                                    <? /** Begin Article Icons * */ if ($this->params->get('show_pdf_icon') || $this->params->get('show_print_icon') || $this->params->get('show_email_icon')) : ?>
                                     <div class="article-icons">
                                         <?
                                         if ($this->print) :
@@ -99,23 +99,23 @@ $canEdit = ($this->user->authorize('com_content', 'edit', 'content', 'all') || $
                                         endif;
                                         ?>
                                     </div>
-                                <? /** End Article Icons * */ endif; ?>
+    <? /** End Article Icons * */ endif; ?>
 
 
 
-                                <? /** Begin Modified Date * */ if (intval($this->article->modified) != 0 && $this->params->get('show_modify_date')) : ?>
+                                    <? /** Begin Modified Date * */ if (intval($this->article->modified) != 0 && $this->params->get('show_modify_date')) : ?>
                                     <span class="date-modified">
-                                        <? echo JText::sprintf('LAST_UPDATED2', JHTML::_('date', $this->article->modified, JText::_('DATE_FORMAT_LC2'))); ?>
+                                    <? echo JText::sprintf('LAST_UPDATED2', JHTML::_('date', $this->article->modified, JText::_('DATE_FORMAT_LC2'))); ?>
                                     </span>
-                                <? /** End Modified Date * */ endif; ?>
+    <? /** End Modified Date * */ endif; ?>
 
 
 
-                                <? /** Begin Url * */ if ($this->params->get('show_url') && $this->article->urls) : ?>
+    <? /** Begin Url * */ if ($this->params->get('show_url') && $this->article->urls) : ?>
                                     <span class="url">
                                         <a href="http://<? echo $this->article->urls; ?>" target="_blank"><? echo $this->escape($this->article->urls); ?></a>
                                     </span>
-                                <? /** End Url * */ endif; ?>
+    <? /** End Url * */ endif; ?>
 
                             </span>
                         </div>
@@ -129,11 +129,11 @@ $canEdit = ($this->user->authorize('com_content', 'edit', 'content', 'all') || $
 
                 <? echo $this->article->text; ?>
 
-                <? echo $this->article->event->afterDisplayContent; ?>
+            <? echo $this->article->event->afterDisplayContent; ?>
             </div>
-            <? /** Begin Article Sec/Cat * */ if (($this->params->get('show_section') && $this->article->sectionid) || ($this->params->get('show_category') && $this->article->catid)) : ?>
+                <? /** Begin Article Sec/Cat * */ if (($this->params->get('show_section') && $this->article->sectionid) || ($this->params->get('show_category') && $this->article->catid)) : ?>
                 <p class="article-cat">
-                    <? if ($this->params->get('show_section') && $this->article->sectionid && isset($this->article->section)) : ?>
+                        <? if ($this->params->get('show_section') && $this->article->sectionid && isset($this->article->section)) : ?>
                         <span class="section">
                             <? if ($this->params->get('link_section')) : ?>
                                 <? echo '<a href="' . JRoute::_(ContentHelperRoute::getSectionRoute($this->article->sectionid)) . '">'; ?>
@@ -144,10 +144,10 @@ $canEdit = ($this->user->authorize('com_content', 'edit', 'content', 'all') || $
                             <? endif; ?>
                             <? if ($this->params->get('show_category')) : ?>
                                 <? echo ' - '; ?>
-                            <? endif; ?>
+                        <? endif; ?>
                         </span>
                     <? endif; ?>
-                    <? if ($this->params->get('show_category') && $this->article->catid) : ?>
+                        <? if ($this->params->get('show_category') && $this->article->catid) : ?>
                         <span class="category">
                             <? if ($this->params->get('link_category')) : ?>
                                 <? echo '<a href="' . JRoute::_(ContentHelperRoute::getCategoryRoute($this->article->catslug, $this->article->sectionid)) . '">'; ?>
@@ -155,11 +155,11 @@ $canEdit = ($this->user->authorize('com_content', 'edit', 'content', 'all') || $
                             <? echo $this->escape($this->article->category); ?>
                             <? if ($this->params->get('link_category')) : ?>
                                 <? echo '</a>'; ?>
-                            <? endif; ?>
+                        <? endif; ?>
                         </span>
-                    <? endif; ?>
+                <? endif; ?>
                 </p>
-            <? /** End Article Sec/Cat * */ endif; ?>
+<? /** End Article Sec/Cat * */ endif; ?>
 
         </div>
     </div>

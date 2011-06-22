@@ -87,7 +87,7 @@ defined('_JEXEC') or die('Restricted access');
                 <input type="hidden" name="gid" value="0" />
                 <? echo JHTML::_('form.token'); ?>
             </form>
-           
+
         </div>
     </div>
 </div>
